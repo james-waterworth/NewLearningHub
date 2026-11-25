@@ -1,0 +1,32 @@
+{
+  "sessions": [
+    {
+      "date": "2026-12-01",
+      "displayDate": "1 December 2026",
+      "startTime": "13:00",
+      "endTime": "17:00",
+      "displayTime": "1pm to 5pm"
+    },
+    {
+      "date": "2027-01-14",
+      "displayDate": "14 January 2027",
+      "startTime": "09:00",
+      "endTime": "13:00",
+      "displayTime": "9am to 1pm"
+    },
+    {
+      "date": "2027-02-16",
+      "displayDate": "16 February 2027",
+      "startTime": "09:00",
+      "endTime": "13:00",
+      "displayTime": "9am to 1pm"
+    },
+    {
+      "date": "2027-03-31",
+      "displayDate": "31 March 2027",
+      "startTime": "13:00",
+      "endTime": "17:00",
+      "displayTime": "1pm to 5pm"
+    }
+  ]
+}

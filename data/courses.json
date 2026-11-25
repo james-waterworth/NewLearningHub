@@ -1,0 +1,101 @@
+{
+  "trust": "Fictional NHS Foundation Trust",
+  "courses": [
+    {
+      "id": "C001",
+      "date": "2026-12-03",
+      "name": "Basic Life Support (BLS) Refresher",
+      "topic": "Resuscitation",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Classroom"
+    },
+    {
+      "id": "C002",
+      "date": "2026-12-08",
+      "name": "Safeguarding Adults Level 2",
+      "topic": "Safeguarding",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
+      "id": "C003",
+      "date": "2026-12-10",
+      "name": "Infection Prevention and Control Essentials",
+      "topic": "Infection Control",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
+      "id": "C004",
+      "date": "2026-12-15",
+      "name": "Manual Handling Practical Skills",
+      "topic": "Health and Safety",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Classroom"
+    },
+    {
+      "id": "C005",
+      "date": "2027-01-12",
+      "name": "Information Governance and Data Security Awareness",
+      "topic": "Information Governance",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
+      "id": "C006",
+      "date": "2027-01-14",
+      "name": "Conflict Resolution and De-escalation",
+      "topic": "Personal Safety",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Classroom"
+    },
+    {
+      "id": "C007",
+      "date": "2027-01-20",
+      "name": "Oliver McGowan Mandatory Training on Learning Disability and Autism",
+      "topic": "Equality, Diversity and Inclusion",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Classroom"
+    },
+    {
+      "id": "C008",
+      "date": "2027-02-02",
+      "name": "Sepsis Recognition and Management",
+      "topic": "Clinical Skills",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
+      "id": "C009",
+      "date": "2027-02-09",
+      "name": "Medicines Management and Safe Administration",
+      "topic": "Medicines Safety",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Classroom"
+    },
+    {
+      "id": "C010",
+      "date": "2027-02-17",
+      "name": "Fire Safety Awareness",
+      "topic": "Health and Safety",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
+      "id": "C011",
+      "date": "2027-03-04",
+      "name": "Leadership Essentials for New Team Leaders",
+      "topic": "Leadership and Management",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Classroom"
+    },
+    {
+      "id": "C012",
+      "date": "2027-03-11",
+      "name": "Quality Improvement Fundamentals",
+      "topic": "Quality Improvement",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    }
+  ]
+}
