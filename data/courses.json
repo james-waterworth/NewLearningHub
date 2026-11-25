@@ -1,8 +1,18 @@
 {
   "trust": "Fictional NHS Foundation Trust",
-  "courses": [
+  "items": [
+    {
+      "id": "V001",
+      "itemType": "Video",
+      "date": "2026-12-01",
+      "name": "Hand Hygiene: The Five Moments Explained",
+      "topic": "Infection Control",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
     {
       "id": "C001",
+      "itemType": "Course",
       "date": "2026-12-03",
       "name": "Basic Life Support (BLS) Refresher",
       "topic": "Resuscitation",
@@ -11,6 +21,7 @@
     },
     {
       "id": "C002",
+      "itemType": "Course",
       "date": "2026-12-08",
       "name": "Safeguarding Adults Level 2",
       "topic": "Safeguarding",
@@ -18,7 +29,17 @@
       "courseType": "Online"
     },
     {
+      "id": "Q001",
+      "itemType": "Quality Improvement",
+      "date": "2026-12-09",
+      "name": "Reducing Missed Medication Doses on Ward Rounds",
+      "topic": "Medicines Safety",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Classroom"
+    },
+    {
       "id": "C003",
+      "itemType": "Course",
       "date": "2026-12-10",
       "name": "Infection Prevention and Control Essentials",
       "topic": "Infection Control",
@@ -27,6 +48,7 @@
     },
     {
       "id": "C004",
+      "itemType": "Course",
       "date": "2026-12-15",
       "name": "Manual Handling Practical Skills",
       "topic": "Health and Safety",
@@ -34,7 +56,35 @@
       "courseType": "Classroom"
     },
     {
+      "id": "Q002",
+      "itemType": "Quality Improvement",
+      "date": "2026-12-16",
+      "name": "PDSA Cycle Workshop: Improving Discharge Planning",
+      "topic": "Patient Flow",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Classroom"
+    },
+    {
+      "id": "V002",
+      "itemType": "Video",
+      "date": "2026-12-17",
+      "name": "Recognising the Deteriorating Patient",
+      "topic": "Clinical Skills",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
+      "id": "V003",
+      "itemType": "Video",
+      "date": "2027-01-07",
+      "name": "Your Role in Keeping Patient Data Safe",
+      "topic": "Information Governance",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
       "id": "C005",
+      "itemType": "Course",
       "date": "2027-01-12",
       "name": "Information Governance and Data Security Awareness",
       "topic": "Information Governance",
@@ -43,6 +93,7 @@
     },
     {
       "id": "C006",
+      "itemType": "Course",
       "date": "2027-01-14",
       "name": "Conflict Resolution and De-escalation",
       "topic": "Personal Safety",
@@ -50,7 +101,17 @@
       "courseType": "Classroom"
     },
     {
+      "id": "Q003",
+      "itemType": "Quality Improvement",
+      "date": "2027-01-19",
+      "name": "Reducing Inpatient Falls: A Ward-Based QI Project",
+      "topic": "Patient Safety",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Classroom"
+    },
+    {
       "id": "C007",
+      "itemType": "Course",
       "date": "2027-01-20",
       "name": "Oliver McGowan Mandatory Training on Learning Disability and Autism",
       "topic": "Equality, Diversity and Inclusion",
@@ -58,7 +119,17 @@
       "courseType": "Classroom"
     },
     {
+      "id": "V004",
+      "itemType": "Video",
+      "date": "2027-01-26",
+      "name": "Speaking Up: How to Raise a Concern",
+      "topic": "Patient Safety Culture",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
       "id": "C008",
+      "itemType": "Course",
       "date": "2027-02-02",
       "name": "Sepsis Recognition and Management",
       "topic": "Clinical Skills",
@@ -67,6 +138,7 @@
     },
     {
       "id": "C009",
+      "itemType": "Course",
       "date": "2027-02-09",
       "name": "Medicines Management and Safe Administration",
       "topic": "Medicines Safety",
@@ -74,7 +146,17 @@
       "courseType": "Classroom"
     },
     {
+      "id": "Q004",
+      "itemType": "Quality Improvement",
+      "date": "2027-02-11",
+      "name": "Streamlining Outpatient Appointment Reminders",
+      "topic": "Patient Experience",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
       "id": "C010",
+      "itemType": "Course",
       "date": "2027-02-17",
       "name": "Fire Safety Awareness",
       "topic": "Health and Safety",
@@ -82,7 +164,26 @@
       "courseType": "Online"
     },
     {
+      "id": "V005",
+      "itemType": "Video",
+      "date": "2027-02-23",
+      "name": "Supporting Colleagues Through Burnout",
+      "topic": "Staff Wellbeing",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
+      "id": "Q005",
+      "itemType": "Quality Improvement",
+      "date": "2027-02-25",
+      "name": "Reducing Pressure Ulcers Through Early Risk Assessment",
+      "topic": "Tissue Viability",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Classroom"
+    },
+    {
       "id": "C011",
+      "itemType": "Course",
       "date": "2027-03-04",
       "name": "Leadership Essentials for New Team Leaders",
       "topic": "Leadership and Management",
@@ -91,9 +192,28 @@
     },
     {
       "id": "C012",
+      "itemType": "Course",
       "date": "2027-03-11",
       "name": "Quality Improvement Fundamentals",
       "topic": "Quality Improvement",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
+      "id": "V006",
+      "itemType": "Video",
+      "date": "2027-03-16",
+      "name": "Introduction to Trauma-Informed Care",
+      "topic": "Mental Health",
+      "hyperlink": "https://www.google.com/",
+      "courseType": "Online"
+    },
+    {
+      "id": "Q006",
+      "itemType": "Quality Improvement",
+      "date": "2027-03-18",
+      "name": "Cutting Theatre Turnaround Times: QI Showcase",
+      "topic": "Operational Efficiency",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
     }

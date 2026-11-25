@@ -3,6 +3,7 @@
   const nameInput = document.getElementById("course-name");
   const dateFromInput = document.getElementById("date-from");
   const dateToInput = document.getElementById("date-to");
+  const itemTypeInput = document.getElementById("item-type");
   const topicOptions = document.getElementById("topic-options");
   const courseList = document.getElementById("course-list");
   const courseCount = document.getElementById("course-count");
@@ -12,6 +13,7 @@
     !nameInput ||
     !dateFromInput ||
     !dateToInput ||
+    !itemTypeInput ||
     !topicOptions ||
     !courseList ||
     !courseCount
@@ -35,17 +37,19 @@
       }
 
       const data = await response.json();
-      if (!data || !Array.isArray(data.courses)) {
-        throw new Error("The course data file does not contain a courses list.");
+      if (!data || !Array.isArray(data.items)) {
+        throw new Error("The course data file does not contain an items list.");
       }
 
-      courses = data.courses.map(validateCourse).sort((first, second) =>
+      courses = data.items.map(validateCourse).sort((first, second) =>
         first.date.localeCompare(second.date),
       );
+      renderItemTypeOptions();
       renderTopicOptions();
       renderCourses();
     } catch (error) {
       console.error("Unable to load the course catalogue.", error);
+      itemTypeInput.replaceChildren(new Option("All item types", ""));
       topicOptions.replaceChildren();
       courseList.replaceChildren(
         createMessage("Courses could not be loaded. Please try again later.", "catalogue-error"),
@@ -55,6 +59,23 @@
   }
 
   let courses = [];
+
+  function renderItemTypeOptions() {
+    const itemTypes = [...new Set(courses.map((course) => course.itemType))].sort((a, b) =>
+      a.localeCompare(b),
+    );
+    const fragment = document.createDocumentFragment();
+    fragment.append(new Option("All item types", ""));
+
+    itemTypes.forEach((itemType) => {
+      const option = document.createElement("option");
+      option.value = itemType;
+      option.textContent = itemType;
+      fragment.append(option);
+    });
+
+    itemTypeInput.replaceChildren(fragment);
+  }
 
   function renderTopicOptions() {
     const topics = [...new Set(courses.map((course) => course.topic))].sort((a, b) =>
@@ -88,6 +109,7 @@
         (checkbox) => checkbox.value,
       ),
     );
+    const selectedItemType = itemTypeInput.value;
     const dateFrom = dateFromInput.value;
     const dateTo = dateToInput.value;
 
@@ -103,6 +125,7 @@
       (course) =>
         (!query || course.name.toLocaleLowerCase().includes(query)) &&
         (selectedTopics.size === 0 || selectedTopics.has(course.topic)) &&
+        (!selectedItemType || course.itemType === selectedItemType) &&
         (!dateFrom || course.date >= dateFrom) &&
         (!dateTo || course.date <= dateTo),
     );
@@ -172,6 +195,7 @@
       typeof course.id !== "string" ||
       typeof course.date !== "string" ||
       typeof course.name !== "string" ||
+      typeof course.itemType !== "string" ||
       typeof course.topic !== "string" ||
       typeof course.courseType !== "string" ||
       typeof course.hyperlink !== "string" ||
