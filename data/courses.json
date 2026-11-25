@@ -6,6 +6,7 @@
       "itemType": "Video",
       "date": "2026-12-01",
       "name": "Hand Hygiene: The Five Moments Explained",
+      "description": "Short animated video explaining when and why to clean hands during patient care.",
       "topic": "Infection Control",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -15,6 +16,7 @@
       "itemType": "Course",
       "date": "2026-12-03",
       "name": "Basic Life Support (BLS) Refresher",
+      "description": "Hands-on refresher covering adult and paediatric basic life support, including CPR and use of an AED.",
       "topic": "Resuscitation",
       "hyperlink": "https://www.google.com/",
       "courseType": "Classroom"
@@ -24,6 +26,7 @@
       "itemType": "Course",
       "date": "2026-12-08",
       "name": "Safeguarding Adults Level 2",
+      "description": "Builds confidence in recognising signs of abuse and neglect in adults and knowing how to escalate concerns.",
       "topic": "Safeguarding",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -33,6 +36,7 @@
       "itemType": "Quality Improvement",
       "date": "2026-12-09",
       "name": "Reducing Missed Medication Doses on Ward Rounds",
+      "description": "Team-based project using data and ward-round observations to reduce missed or delayed medication doses.",
       "topic": "Medicines Safety",
       "hyperlink": "https://www.google.com/",
       "courseType": "Classroom"
@@ -42,6 +46,7 @@
       "itemType": "Course",
       "date": "2026-12-10",
       "name": "Infection Prevention and Control Essentials",
+      "description": "Covers standard precautions, hand hygiene, PPE and cleaning practices to reduce healthcare-associated infections.",
       "topic": "Infection Control",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -51,6 +56,7 @@
       "itemType": "Course",
       "date": "2026-12-15",
       "name": "Manual Handling Practical Skills",
+      "description": "Practical session on safe moving and handling techniques for patients and equipment to prevent injury.",
       "topic": "Health and Safety",
       "hyperlink": "https://www.google.com/",
       "courseType": "Classroom"
@@ -60,6 +66,7 @@
       "itemType": "Quality Improvement",
       "date": "2026-12-16",
       "name": "PDSA Cycle Workshop: Improving Discharge Planning",
+      "description": "Workshop applying Plan-Do-Study-Act cycles to test changes that make patient discharge smoother and safer.",
       "topic": "Patient Flow",
       "hyperlink": "https://www.google.com/",
       "courseType": "Classroom"
@@ -69,6 +76,7 @@
       "itemType": "Video",
       "date": "2026-12-17",
       "name": "Recognising the Deteriorating Patient",
+      "description": "Case-based video showing how to spot early signs of patient deterioration and respond effectively.",
       "topic": "Clinical Skills",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -78,6 +86,7 @@
       "itemType": "Video",
       "date": "2027-01-07",
       "name": "Your Role in Keeping Patient Data Safe",
+      "description": "Brief explainer on everyday practices that protect patient confidentiality and prevent data breaches.",
       "topic": "Information Governance",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -87,6 +96,7 @@
       "itemType": "Course",
       "date": "2027-01-12",
       "name": "Information Governance and Data Security Awareness",
+      "description": "Explains staff responsibilities for handling patient information securely and in line with data protection law.",
       "topic": "Information Governance",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -96,6 +106,7 @@
       "itemType": "Course",
       "date": "2027-01-14",
       "name": "Conflict Resolution and De-escalation",
+      "description": "Teaches practical techniques for recognising early warning signs and de-escalating challenging situations.",
       "topic": "Personal Safety",
       "hyperlink": "https://www.google.com/",
       "courseType": "Classroom"
@@ -105,6 +116,7 @@
       "itemType": "Quality Improvement",
       "date": "2027-01-19",
       "name": "Reducing Inpatient Falls: A Ward-Based QI Project",
+      "description": "Ward-based project testing practical measures, such as risk assessments and bedside checks, to reduce inpatient falls.",
       "topic": "Patient Safety",
       "hyperlink": "https://www.google.com/",
       "courseType": "Classroom"
@@ -114,6 +126,7 @@
       "itemType": "Course",
       "date": "2027-01-20",
       "name": "Oliver McGowan Mandatory Training on Learning Disability and Autism",
+      "description": "Interactive training to improve understanding of learning disability and autism and deliver better, more inclusive care.",
       "topic": "Equality, Diversity and Inclusion",
       "hyperlink": "https://www.google.com/",
       "courseType": "Classroom"
@@ -123,6 +136,7 @@
       "itemType": "Video",
       "date": "2027-01-26",
       "name": "Speaking Up: How to Raise a Concern",
+      "description": "Staff stories and practical tips on raising concerns safely and what happens after you speak up.",
       "topic": "Patient Safety Culture",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -132,6 +146,7 @@
       "itemType": "Course",
       "date": "2027-02-02",
       "name": "Sepsis Recognition and Management",
+      "description": "Teaches early identification of sepsis, use of screening tools and prompt escalation and treatment pathways.",
       "topic": "Clinical Skills",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -141,6 +156,7 @@
       "itemType": "Course",
       "date": "2027-02-09",
       "name": "Medicines Management and Safe Administration",
+      "description": "Covers safe prescribing, storage, administration and recording of medicines, including error prevention.",
       "topic": "Medicines Safety",
       "hyperlink": "https://www.google.com/",
       "courseType": "Classroom"
@@ -150,6 +166,7 @@
       "itemType": "Quality Improvement",
       "date": "2027-02-11",
       "name": "Streamlining Outpatient Appointment Reminders",
+      "description": "Project trialling clearer, more timely appointment reminders to reduce missed outpatient appointments.",
       "topic": "Patient Experience",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -159,6 +176,7 @@
       "itemType": "Course",
       "date": "2027-02-17",
       "name": "Fire Safety Awareness",
+      "description": "Overview of fire prevention, evacuation procedures and the correct use of fire safety equipment.",
       "topic": "Health and Safety",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -168,6 +186,7 @@
       "itemType": "Video",
       "date": "2027-02-23",
       "name": "Supporting Colleagues Through Burnout",
+      "description": "Expert-led video on spotting signs of burnout and ways to support yourself and your colleagues.",
       "topic": "Staff Wellbeing",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -177,6 +196,7 @@
       "itemType": "Quality Improvement",
       "date": "2027-02-25",
       "name": "Reducing Pressure Ulcers Through Early Risk Assessment",
+      "description": "Project focused on earlier risk assessment and repositioning routines to prevent pressure ulcers.",
       "topic": "Tissue Viability",
       "hyperlink": "https://www.google.com/",
       "courseType": "Classroom"
@@ -186,6 +206,7 @@
       "itemType": "Course",
       "date": "2027-03-04",
       "name": "Leadership Essentials for New Team Leaders",
+      "description": "Introduces core leadership skills for new team leaders, including communication, delegation and supporting teams.",
       "topic": "Leadership and Management",
       "hyperlink": "https://www.google.com/",
       "courseType": "Classroom"
@@ -195,6 +216,7 @@
       "itemType": "Course",
       "date": "2027-03-11",
       "name": "Quality Improvement Fundamentals",
+      "description": "Introduces the principles and tools of quality improvement, including how to plan and run a small project.",
       "topic": "Quality Improvement",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -204,6 +226,7 @@
       "itemType": "Video",
       "date": "2027-03-16",
       "name": "Introduction to Trauma-Informed Care",
+      "description": "Overview of trauma-informed care principles and how they shape compassionate patient interactions.",
       "topic": "Mental Health",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"
@@ -213,6 +236,7 @@
       "itemType": "Quality Improvement",
       "date": "2027-03-18",
       "name": "Cutting Theatre Turnaround Times: QI Showcase",
+      "description": "Showcase of a multidisciplinary project to reduce theatre turnaround times and improve list efficiency.",
       "topic": "Operational Efficiency",
       "hyperlink": "https://www.google.com/",
       "courseType": "Online"

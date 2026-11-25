@@ -148,12 +148,15 @@
     const article = document.createElement("article");
     const meta = document.createElement("p");
     const heading = document.createElement("h3");
+    const description = document.createElement("p");
     const link = document.createElement("a");
 
     article.className = "course-card catalogue-course";
     meta.className = "course-card__meta";
     meta.textContent = `${formatDate(course.date)} · ${course.topic} · ${course.courseType}`;
     heading.textContent = course.name;
+    description.className = "course-card__description";
+    description.textContent = course.description;
 
     link.className = "course-card__link";
     link.href = course.hyperlink;
@@ -161,7 +164,7 @@
     link.rel = "noopener noreferrer";
     link.append("View course ", createArrow());
 
-    article.append(meta, heading, link);
+    article.append(meta, heading, description, link);
     return article;
   }
 
@@ -195,6 +198,7 @@
       typeof course.id !== "string" ||
       typeof course.date !== "string" ||
       typeof course.name !== "string" ||
+      typeof course.description !== "string" ||
       typeof course.itemType !== "string" ||
       typeof course.topic !== "string" ||
       typeof course.courseType !== "string" ||
