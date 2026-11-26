@@ -16,18 +16,7 @@
 
 <body>
 
-  <header class="trust-header">
-    <div class="new-page-container trust-header__inner">
-      <a class="trust-brand" href="index.html" aria-label="RDaSH Learning Hub home">
-        <img class="rdash-logo" src="Assets/learning_hub_logo.svg" alt="Rotherham Doncaster and South Humber NHS Foundation Trust Logo">
-      </a>
-      <img
-        class="trust-header__logo"
-        src="Assets/rdashwhite.PNG"
-        alt="Rotherham Doncaster and South Humber NHS Foundation Trust"
-      >
-    </div>
-  </header>
+  <div id="header-mount"></div>
 
   <div id="primary-nav-mount"></div>
 
@@ -73,165 +62,131 @@
   </section>
 
   <main class="new-page-container content" id="main-content">
-    <section class="welcome-row" aria-labelledby="welcome-title">
-      <div>
-        <h2 id="welcome-title">Welcome to the RDaSH Learning Hub</h2>
-        <p>Less time searching, more time learning: find learning, plan ahead and shape the future.</p>
-      </div>
-    </section>
+    <div class="home-layout">
+      <div class="home-primary">
+        <section class="welcome-row" aria-labelledby="welcome-title">
+          <div>
+            <h2 id="welcome-title">Welcome to the RDaSH Learning Hub</h2>
+            <p>Less time searching, more time learning: find learning, plan ahead and shape the future.</p>
+          </div>
+        </section>
 
-    <section aria-labelledby="learning-title">
-      <div class="section-heading">
-        <a class="text-link" href="catalogue.html">Browse all learning <span aria-hidden="true">→</span></a>
-      </div>
-      <div class="course-grid">
-        <article class="course-card">
-          <p class="course-card__meta">Live sessions · Course catalogue</p>
-          <h3><a href="catalogue.html">Find a course</a></h3>
-          <p>Browse learning opportunities and see upcoming dates, venues and booking options.</p>
-          <a class="course-card__link" href="catalogue.html">View the catalogue <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="course-card course-card--green">
-          <p class="course-card__meta">Protected learning · Staff development</p>
-          <h3><a href="learner.html">Learning Half Days</a></h3>
-          <p>Find the 2026-2027 dates and plan whether your session is in the morning or afternoon.</p>
-          <a class="course-card__link" href="learner.html" data-lhd-popup>
-            View Learning Half Days <span aria-hidden="true">→</span>
-          </a>
-        </article>
-        <article class="course-card course-card--purple">
-          <p class="course-card__meta">Upcoming courses · Course calendar</p>
-          <h3><a href="calendar.html">Course calendar</a></h3>
-          <p>View scheduled courses, dates and session details in one place.</p>
-          <a class="course-card__link" href="calendar.html">Browse the course calendar <span aria-hidden="true">→</span></a>
-        </article>
-      </div>
-    </section>
+        <section aria-labelledby="learning-title">
+          <div class="section-heading">
+            <a class="text-link" href="catalogue.html">Browse all learning <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="course-grid">
+            <article class="course-card">
+              <h3><a href="catalogue.html">Find a course</a></h3>
+              <p>Browse courses and upcoming dates.</p>
+              <a class="course-card__link" href="catalogue.html">View the catalogue <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="course-card course-card--green">
+              <h3><a href="learner.html">Learning Half Days</a></h3>
+              <p>Check dates and plan your session.</p>
+              <a class="course-card__link" href="learner.html" data-lhd-popup>
+                View Learning Half Days <span aria-hidden="true">→</span>
+              </a>
+            </article>
+            <article class="course-card course-card--purple">
+              <h3><a href="calendar.html">Course calendar</a></h3>
+              <p>View upcoming courses and dates.</p>
+              <a class="course-card__link" href="calendar.html">Browse the course calendar <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </section>
 
-    <div class="lower-grid">
-      <section class="panel" aria-labelledby="opportunities-title">
-        <h2 id="opportunities-title">Learning opportunities</h2>
-        <ul class="learning-list">
-          <li>
-            <div class="learning-item">
-              <div>
-                <a class="learning-item__title" href="mast.html">Mandatory and statutory training</a>
-                <span class="learning-item__detail">MAST guidance and essential learning</span>
-              </div>
-              <span aria-hidden="true">→</span>
-            </div>
-          </li>
-          <li>
-            <div class="learning-item">
-              <div>
-                <a class="learning-item__title" href="quality-improvement.html">Quality Improvement</a>
-                <span class="learning-item__detail">Tools, methodologies and project support</span>
-              </div>
-              <span aria-hidden="true">→</span>
-            </div>
-          </li>
-          <li>
-            <div class="learning-item">
-              <div>
-                <a class="learning-item__title" href="rooms.html">Learning venues</a>
-                <span class="learning-item__detail">Find trust and community rooms</span>
-              </div>
-              <span aria-hidden="true">→</span>
-            </div>
-          </li>
-          <li>
-            <div class="learning-item">
-              <div>
-                <a class="learning-item__title" href="Assets/LearningMattersLatest.pdf" target="_blank" rel="noopener">Learning Matters newsletter</a>
-                <span class="learning-item__detail">Read the latest edition and opportunities</span>
-              </div>
-              <span aria-hidden="true">→</span>
-            </div>
-          </li>
-        </ul>
-      </section>
+        <section aria-labelledby="learning-half-day-title">
+          <h2 id="learning-half-day-title">How can you use your learning half day?</h2>
+          <p>Learning isn't just online courses; you can build your skills in lots of ways. Learning Half Days give you time to learn, think, and get better at your job.</p>
+          <p>You can use it to:</p>
+          <ul>
+            <li>Work together with your team</li>
+            <li>Learn new ways to help patients, colleagues, and families, including your own</li>
+            <li>Work on getting better and learning more for yourself</li>
+            <li>Try something new or share what you know</li>
+            <li>Do your important mandatory and statutory training</li>
+          </ul>
+          <p>In this Learning Hub, you'll find lots of useful resources, classes, and chances to meet others who also want to learn. Everything is designed to help you share ideas and do well. Jump in, explore, and let's learn together!</p>
+        </section>
+
+        <section class="quick-access-section" aria-labelledby="quick-access-title">
+          <div class="section-heading">
+            <h2 id="quick-access-title">Quick Access</h2>
+          </div>
+          <div class="course-grid quick-access-grid">
+            <a href="educator.html" class="course-card tile-card tile-card--primary">
+              <span class="tile-card__icon bi bi-person-badge" aria-hidden="true"></span>
+              <h3>Educator</h3>
+              <p>Manager support &amp; session setup.</p>
+              <span class="course-card__link">Explore educator support <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="learner.html" class="course-card tile-card tile-card--success">
+              <span class="tile-card__icon bi bi-mortarboard" aria-hidden="true"></span>
+              <h3>Learner</h3>
+              <p>How it works &amp; course logging.</p>
+              <span class="course-card__link">Explore learner guidance <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="feedback.html" class="course-card tile-card tile-card--teal">
+              <span class="tile-card__icon bi bi-chat-left-heart" aria-hidden="true"></span>
+              <h3>Feedback</h3>
+              <p>Share your thoughts on training courses.</p>
+              <span class="course-card__link">Share feedback <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="catalogue.html" class="course-card tile-card tile-card--info">
+              <span class="tile-card__icon bi bi-book" aria-hidden="true"></span>
+              <h3>Catalogue</h3>
+              <p>Browse all live sessions.</p>
+              <span class="course-card__link">Browse the catalogue <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="video-vault.html" class="course-card tile-card tile-card--gold">
+              <span class="tile-card__icon bi bi-play-circle" aria-hidden="true"></span>
+              <h3>Video Vault</h3>
+              <p>Watch recorded sessions.</p>
+              <span class="course-card__link">Explore recorded learning <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="mast.html" class="course-card tile-card tile-card--orange">
+              <span class="tile-card__icon bi bi-shield-check" aria-hidden="true"></span>
+              <h3>MAST</h3>
+              <p>Mandatory and Statutory Training.</p>
+              <span class="course-card__link">View MAST learning <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="quality-improvement.html" class="course-card tile-card tile-card--purple">
+              <span class="tile-card__icon bi bi-diagram-3" aria-hidden="true"></span>
+              <h3>Quality Improvement</h3>
+              <p>Tools, methodologies &amp; project support.</p>
+              <span class="course-card__link">Explore Quality Improvement <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="rooms.html" class="course-card tile-card tile-card--danger">
+              <span class="tile-card__icon bi bi-geo-alt" aria-hidden="true"></span>
+              <h3>Rooms</h3>
+              <p>Find trust &amp; community venues.</p>
+              <span class="course-card__link">Find a venue <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="faqs.html" class="course-card tile-card tile-card--secondary">
+              <span class="tile-card__icon bi bi-question-circle" aria-hidden="true"></span>
+              <h3>Help &amp; FAQ</h3>
+              <p>FAQs &amp; training requests.</p>
+              <span class="course-card__link">Get help <span aria-hidden="true">→</span></span>
+            </a>
+          </div>
+        </section>
+
+        <section class="help-strip" id="support" aria-label="Learning support">
+          <p><strong>Need help with learning?</strong>Find answers in the FAQs or share feedback about training courses.</p>
+          <a class="text-link" href="faqs.html">Help and FAQs <span aria-hidden="true">→</span></a>
+        </section>
+      </div>
 
       <aside class="panel deadline" aria-labelledby="upcoming-title">
-        <h2 id="upcoming-title">Upcoming courses</h2>
+        <h2 id="upcoming-title">Upcoming Learning Half Day Courses</h2>
         <div id="upcomingList"></div>
         <a class="text-link" href="catalogue.html">View full calendar <span aria-hidden="true">→</span></a>
       </aside>
     </div>
-
-    <section aria-labelledby="quick-access-title">
-      <div class="section-heading">
-        <h2 id="quick-access-title">Quick Access</h2>
-      </div>
-      <div class="course-grid quick-access-grid">
-        <a href="educator.html" class="course-card tile-card tile-card--primary">
-          <span class="tile-card__icon bi bi-person-badge" aria-hidden="true"></span>
-          <h3>Educator</h3>
-          <p>Manager support &amp; session setup.</p>
-          <span class="course-card__link">Explore educator support <span aria-hidden="true">→</span></span>
-        </a>
-        <a href="learner.html" class="course-card tile-card tile-card--success">
-          <span class="tile-card__icon bi bi-mortarboard" aria-hidden="true"></span>
-          <h3>Learner</h3>
-          <p>How it works &amp; course logging.</p>
-          <span class="course-card__link">Explore learner guidance <span aria-hidden="true">→</span></span>
-        </a>
-        <a href="feedback.html" class="course-card tile-card tile-card--teal">
-          <span class="tile-card__icon bi bi-chat-left-heart" aria-hidden="true"></span>
-          <h3>Feedback</h3>
-          <p>Share your thoughts on training courses.</p>
-          <span class="course-card__link">Share feedback <span aria-hidden="true">→</span></span>
-        </a>
-        <a href="catalogue.html" class="course-card tile-card tile-card--info">
-          <span class="tile-card__icon bi bi-book" aria-hidden="true"></span>
-          <h3>Catalogue</h3>
-          <p>Browse all live sessions.</p>
-          <span class="course-card__link">Browse the catalogue <span aria-hidden="true">→</span></span>
-        </a>
-        <a href="video-vault.html" class="course-card tile-card tile-card--gold">
-          <span class="tile-card__icon bi bi-play-circle" aria-hidden="true"></span>
-          <h3>Video Vault</h3>
-          <p>Watch recorded sessions.</p>
-          <span class="course-card__link">Explore recorded learning <span aria-hidden="true">→</span></span>
-        </a>
-        <a href="mast.html" class="course-card tile-card tile-card--orange">
-          <span class="tile-card__icon bi bi-shield-check" aria-hidden="true"></span>
-          <h3>MAST</h3>
-          <p>Mandatory and Statutory Training.</p>
-          <span class="course-card__link">View MAST learning <span aria-hidden="true">→</span></span>
-        </a>
-        <a href="quality-improvement.html" class="course-card tile-card tile-card--purple">
-          <span class="tile-card__icon bi bi-diagram-3" aria-hidden="true"></span>
-          <h3>Quality Improvement</h3>
-          <p>Tools, methodologies &amp; project support.</p>
-          <span class="course-card__link">Explore Quality Improvement <span aria-hidden="true">→</span></span>
-        </a>
-        <a href="rooms.html" class="course-card tile-card tile-card--danger">
-          <span class="tile-card__icon bi bi-geo-alt" aria-hidden="true"></span>
-          <h3>Rooms</h3>
-          <p>Find trust &amp; community venues.</p>
-          <span class="course-card__link">Find a venue <span aria-hidden="true">→</span></span>
-        </a>
-        <a href="faqs.html" class="course-card tile-card tile-card--secondary">
-          <span class="tile-card__icon bi bi-question-circle" aria-hidden="true"></span>
-          <h3>Help &amp; FAQ</h3>
-          <p>FAQs &amp; training requests.</p>
-          <span class="course-card__link">Get help <span aria-hidden="true">→</span></span>
-        </a>
-      </div>
-    </section>
-
-    <section class="help-strip" id="support" aria-label="Learning support">
-      <p><strong>Need help with learning?</strong>Find answers in the FAQs or share feedback about training courses.</p>
-      <a class="text-link" href="faqs.html">Help and FAQs <span aria-hidden="true">→</span></a>
-    </section>
   </main>
 
-  <footer class="footer">
-    <div class="new-page-container footer__inner">
-      <p>© RDaSH · Learning Hub</p>
-      <p><a href="faqs.html">Accessibility</a> &nbsp;·&nbsp; <a href="faqs.html">Privacy</a> &nbsp;·&nbsp; <a href="feedback.html">Feedback</a></p>
-    </div>
-  </footer>
+  <div id="footer-mount"></div>
 
   <dialog class="lhd-dialog" id="lhd-dialog" aria-labelledby="lhd-dialog-title">
     <div class="lhd-dialog__header">
@@ -250,8 +205,9 @@
   <!-- Core modules -->
   <script src="script/core/config.js"></script>
   <script src="script/core/data-loader.js"></script>
-  <script src="script/core/navigation.js"></script>
   <script src="script/core/header.js"></script>
+  <script src="script/core/navigation.js"></script>
+  <script src="script/core/footer.js"></script>
   <!-- Page module -->
   <script src="script/pages/lhd-popup.js"></script>
   <script src="script/pages/home.js"></script>

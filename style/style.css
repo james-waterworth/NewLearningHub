@@ -451,6 +451,10 @@ a:hover {
   margin-bottom: 0;
 }
 
+.quick-access-section {
+  margin-top: 32px;
+}
+
 .text-link {
   font-weight: 700;
 }
@@ -543,6 +547,18 @@ a:hover {
 
 .course-card--green {
   border-top-color: var(--green);
+}
+
+.course-card--video {
+  border-top-color: #c68a12;
+}
+
+.course-card--course {
+  border-top-color: #05a2c0;
+}
+
+.course-card--quality-improvement {
+  border-top-color: #6f42c1;
 }
 
 .course-card--purple {
@@ -844,11 +860,15 @@ a:hover {
   color: var(--muted);
 }
 
-.lower-grid {
+.home-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(270px, .9fr);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
+}
+
+.home-primary {
+  min-width: 0;
 }
 
 .panel {
@@ -902,7 +922,7 @@ a:hover {
 
 .deadline {
   background: #fff;
-  border-left: 5px solid var(--trust-blue);
+  border-left: 5px solid #E60C96;
 }
 
 .deadline p:last-child {
@@ -910,8 +930,7 @@ a:hover {
 }
 
 #upcomingList {
-  max-height: 310px;
-  overflow-y: auto;
+  margin-bottom: 16px;
 }
 
 .help-strip {
@@ -1001,7 +1020,7 @@ a:hover {
     min-height: 0;
   }
 
-  .lower-grid {
+  .home-layout {
     grid-template-columns: 1fr;
   }
 

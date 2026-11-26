@@ -13,13 +13,14 @@
   let calendar = null;
 
   if (
-    !filterForm ||
-    !nameInput ||
-    !dateFromInput ||
-    !dateToInput ||
-    !itemTypeInput ||
-    !topicOptions ||
-    (!courseList && !courseCalendar) ||
+    (!courseCalendar &&
+      (!filterForm ||
+        !nameInput ||
+        !dateFromInput ||
+        !dateToInput ||
+        !itemTypeInput ||
+        !topicOptions ||
+        !courseList)) ||
     !courseCount ||
     (courseCalendar && !calendarMessage)
   ) {
@@ -28,11 +29,13 @@
 
   loadCourses();
 
-  filterForm.addEventListener("input", renderCourses);
-  filterForm.addEventListener("change", renderCourses);
-  filterForm.addEventListener("reset", () => {
-    window.setTimeout(renderCourses, 0);
-  });
+  if (filterForm) {
+    filterForm.addEventListener("input", renderCourses);
+    filterForm.addEventListener("change", renderCourses);
+    filterForm.addEventListener("reset", () => {
+      window.setTimeout(renderCourses, 0);
+    });
+  }
 
   async function loadCourses() {
     try {
@@ -75,12 +78,18 @@
       }
 
       renderItemTypeOptions();
-      renderTopicOptions();
+      if (topicOptions) {
+        renderTopicOptions();
+      }
       renderCourses();
     } catch (error) {
       console.error("Unable to load learning items.", error);
-      itemTypeInput.replaceChildren(new Option("All item types", ""));
-      topicOptions.replaceChildren();
+      if (itemTypeInput) {
+        itemTypeInput.replaceChildren(new Option("All item types", ""));
+      }
+      if (topicOptions) {
+        topicOptions.replaceChildren();
+      }
       if (calendar) {
         calendar.destroy();
         calendar = null;
@@ -100,6 +109,10 @@
   }
 
   function renderItemTypeOptions() {
+    if (!itemTypeInput) {
+      return;
+    }
+
     const itemTypes = [...new Set(courses.map((course) => course.itemType))].sort((a, b) =>
       a.localeCompare(b),
     );
@@ -117,6 +130,10 @@
   }
 
   function renderTopicOptions() {
+    if (!topicOptions) {
+      return;
+    }
+
     const topics = [...new Set(courses.map((course) => course.topic))].sort((a, b) =>
       a.localeCompare(b),
     );
@@ -142,15 +159,15 @@
   }
 
   function renderCourses() {
-    const query = nameInput.value.trim().toLocaleLowerCase();
+    const query = nameInput?.value.trim().toLocaleLowerCase() || "";
     const selectedTopics = new Set(
-      [...topicOptions.querySelectorAll('input[name="topic"]:checked')].map(
+      [...(topicOptions?.querySelectorAll('input[name="topic"]:checked') || [])].map(
         (checkbox) => checkbox.value,
       ),
     );
-    const selectedItemType = itemTypeInput.value;
-    const dateFrom = dateFromInput.value;
-    const dateTo = dateToInput.value;
+    const selectedItemType = itemTypeInput?.value || "";
+    const dateFrom = dateFromInput?.value || "";
+    const dateTo = dateToInput?.value || "";
 
     if (dateFrom && dateTo && dateFrom > dateTo) {
       courseCount.textContent = "";
@@ -221,6 +238,15 @@
     const link = document.createElement("a");
 
     article.className = "course-card catalogue-course";
+    if (course.itemType === "Video") {
+      article.classList.add("course-card--video");
+    }
+    if (course.itemType === "Course") {
+      article.classList.add("course-card--course");
+    }
+    if (course.itemType === "Quality Improvement") {
+      article.classList.add("course-card--quality-improvement");
+    }
     meta.className = "course-card__meta";
     meta.textContent = `${formatDate(course.date)} · ${course.topic} · ${course.courseType}`;
     heading.textContent = course.name;

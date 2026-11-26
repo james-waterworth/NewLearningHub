@@ -9,7 +9,7 @@
   const links = [
     { href: "index.html", label: "Home" },
     { href: "catalogue.html", label: "Find learning" },
-    { href: "quality-improvement.html", label: "Quality Improvement" },
+    { href: "quality-improvement.html", label: "Quality improvement" },
     { href: "learner.html", label: "Learner" },
     { href: "educator.html", label: "Educator" },
     { href: "volunteer.html", label: "Volunteer"},
