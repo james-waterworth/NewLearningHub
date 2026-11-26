@@ -65,10 +65,17 @@ a:hover {
 }
 
 .rdash-logo {
-  height: 58px;
+  height: 150px;
   width: auto;
   display: block;
   background: transparent;
+  object-fit: contain;
+}
+
+.trust-header__logo {
+  display: block;
+  width: auto;
+  height: 84px;
   object-fit: contain;
 }
 
@@ -347,6 +354,54 @@ a:hover {
   background: #f5f7f8;
 }
 
+.course-calendar {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.course-calendar .fc .fc-toolbar {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.course-calendar .fc .fc-button-primary {
+  border-color: var(--trust-blue);
+  background: var(--trust-blue);
+}
+
+.course-calendar .fc .fc-button-primary:hover {
+  border-color: var(--deep-blue);
+  background: var(--deep-blue);
+}
+
+.course-calendar .fc .fc-button-primary:disabled {
+  border-color: var(--trust-blue);
+  background: var(--trust-blue);
+  opacity: .65;
+}
+
+.course-calendar .fc .fc-col-header-cell-cushion,
+.course-calendar .fc .fc-daygrid-day-number {
+  color: var(--deep-blue);
+  text-decoration: none;
+}
+
+.course-calendar .fc .fc-daygrid-event {
+  border-color: var(--trust-blue);
+  background: var(--trust-blue);
+  cursor: pointer;
+}
+
+.calendar-message {
+  margin-bottom: 16px;
+}
+
+.calendar-list-link {
+  margin: 18px 0 0;
+}
+
 .welcome-row {
   display: flex;
   align-items: flex-start;
@@ -398,6 +453,73 @@ a:hover {
 
 .text-link {
   font-weight: 700;
+}
+
+.tile-card {
+  --tile-accent: var(--trust-blue);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.tile-card:hover {
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.tile-card h3 {
+  color: var(--deep-blue);
+}
+
+.tile-card__icon {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--tile-accent);
+  font-size: 32px;
+}
+
+.tile-card .course-card__link {
+  color: var(--trust-blue);
+}
+
+.course-card.tile-card {
+  border-top-color: var(--tile-accent);
+}
+
+.tile-card--primary {
+  --tile-accent: #0d6efd;
+}
+
+.tile-card--success {
+  --tile-accent: #198754;
+}
+
+.tile-card--teal {
+  --tile-accent: #006666;
+}
+
+.tile-card--info {
+  --tile-accent: #0dcaf0;
+}
+
+.tile-card--gold {
+  --tile-accent: #c68a12;
+}
+
+.tile-card--orange {
+  --tile-accent: #d35400;
+}
+
+.tile-card--purple {
+  --tile-accent: #6f42c1;
+}
+
+.tile-card--danger {
+  --tile-accent: #dc3545;
+}
+
+.tile-card--secondary {
+  --tile-accent: #6c757d;
 }
 
 .course-grid {
@@ -455,6 +577,188 @@ a:hover {
 
 .course-card__link:hover span {
   transform: translateX(3px);
+}
+
+.educator-section {
+  margin-bottom: 40px;
+}
+
+.educator-intro {
+  max-width: 850px;
+  color: var(--muted);
+}
+
+.educator-step__heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.educator-step__heading h3 {
+  margin: 0;
+}
+
+.educator-step__number {
+  flex: 0 0 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--trust-blue);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.educator-accordion {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.educator-accordion .accordion-button {
+  color: var(--deep-blue);
+  font-weight: 700;
+}
+
+.educator-accordion .accordion-button:not(.collapsed) {
+  background: var(--pale-blue);
+  color: var(--deep-blue);
+  box-shadow: none;
+}
+
+.educator-accordion .accordion-button:focus {
+  border-color: var(--trust-blue);
+  box-shadow: 0 0 0 3px rgba(0, 94, 184, .2);
+}
+
+.educator-help,
+.educator-template-note {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-left: 5px solid var(--trust-blue);
+  background: #f5f7f8;
+}
+
+.educator-help {
+  margin-bottom: 0;
+}
+
+.educator-representatives {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.educator-representatives li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.educator-submission {
+  margin-bottom: 40px;
+}
+
+.educator-guidance-list {
+  margin-bottom: 0;
+  padding-left: 22px;
+}
+
+.educator-guidance-list li + li {
+  margin-top: 10px;
+}
+
+.educator-template-note {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0;
+  background: var(--pale-blue);
+}
+
+.educator-template-note > span {
+  flex: 0 0 auto;
+  color: var(--trust-blue);
+  font-size: 32px;
+}
+
+.educator-template-note p {
+  margin: 0;
+}
+
+.educator-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.educator-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.educator-swatch {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.educator-swatch--standard {
+  background: #fff;
+}
+
+.educator-swatch--blue,
+.educator-table .educator-col-blue {
+  background: #e8f1f8;
+}
+
+.educator-swatch--peach,
+.educator-table .educator-col-peach {
+  background: #f8e3d8;
+}
+
+.educator-table-wrap {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.educator-table {
+  min-width: 1500px;
+  font-size: 14px;
+}
+
+.educator-table thead th {
+  background: var(--deep-blue);
+  color: #fff;
+  vertical-align: bottom;
+}
+
+.educator-table .educator-row-blank > * {
+  color: var(--muted);
+  text-align: center;
+}
+
+.educator-quote {
+  margin: 0;
+  padding: 18px;
+  border-left: 5px solid var(--trust-blue);
+  background: #f5f7f8;
+  color: var(--muted);
+  font-style: italic;
+  text-align: center;
 }
 
 .lhd-dialog {
@@ -665,6 +969,10 @@ a:hover {
     height: 48px;
   }
 
+  .trust-header__logo {
+    height: 64px;
+  }
+
   .header-account {
     font-size: 14px;
   }
@@ -705,6 +1013,10 @@ a:hover {
     max-height: 240px;
   }
 
+  .educator-representatives {
+    grid-template-columns: 1fr;
+  }
+
   .welcome-row {
     display: block;
   }
@@ -733,6 +1045,10 @@ a:hover {
     gap: 10px;
     padding-top: 12px;
     padding-bottom: 12px;
+  }
+
+  .trust-header__logo {
+    align-self: flex-end;
   }
 
   .section-heading {

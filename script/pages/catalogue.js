@@ -6,7 +6,11 @@
   const itemTypeInput = document.getElementById("item-type");
   const topicOptions = document.getElementById("topic-options");
   const courseList = document.getElementById("course-list");
+  const courseCalendar = document.getElementById("course-calendar");
+  const calendarMessage = document.getElementById("calendar-message");
   const courseCount = document.getElementById("course-count");
+  let courses = [];
+  let calendar = null;
 
   if (
     !filterForm ||
@@ -15,10 +19,11 @@
     !dateToInput ||
     !itemTypeInput ||
     !topicOptions ||
-    !courseList ||
-    !courseCount
+    (!courseList && !courseCalendar) ||
+    !courseCount ||
+    (courseCalendar && !calendarMessage)
   ) {
-    throw new Error("Course catalogue page markup is incomplete.");
+    throw new Error("Learning catalogue or calendar page markup is incomplete.");
   }
 
   loadCourses();
@@ -31,6 +36,27 @@
 
   async function loadCourses() {
     try {
+      if (courseCalendar) {
+        if (!window.FullCalendar || typeof window.FullCalendar.Calendar !== "function") {
+          throw new Error("The calendar library could not be loaded.");
+        }
+
+        calendar = new window.FullCalendar.Calendar(courseCalendar, {
+          initialView: "dayGridMonth",
+          height: "auto",
+          dayMaxEvents: true,
+          eventClick(info) {
+            if (!info.event.url) {
+              return;
+            }
+
+            info.jsEvent.preventDefault();
+            window.open(info.event.url, "_blank", "noopener,noreferrer");
+          },
+        });
+        calendar.render();
+      }
+
       const response = await fetch("data/courses.json");
       if (!response.ok) {
         throw new Error(`Request failed with status ${response.status}`);
@@ -44,21 +70,34 @@
       courses = data.items.map(validateCourse).sort((first, second) =>
         first.date.localeCompare(second.date),
       );
+      if (calendar && courses.length > 0) {
+        calendar.gotoDate(courses[0].date);
+      }
+
       renderItemTypeOptions();
       renderTopicOptions();
       renderCourses();
     } catch (error) {
-      console.error("Unable to load the course catalogue.", error);
+      console.error("Unable to load learning items.", error);
       itemTypeInput.replaceChildren(new Option("All item types", ""));
       topicOptions.replaceChildren();
-      courseList.replaceChildren(
-        createMessage("Courses could not be loaded. Please try again later.", "catalogue-error"),
-      );
+      if (calendar) {
+        calendar.destroy();
+        calendar = null;
+      }
+      if (calendarMessage) {
+        calendarMessage.className = "catalogue-error calendar-message";
+        calendarMessage.textContent = "Learning items could not be loaded. Please try again later.";
+        calendarMessage.hidden = false;
+      }
+      if (courseList) {
+        courseList.replaceChildren(
+          createMessage("Courses could not be loaded. Please try again later.", "catalogue-error"),
+        );
+      }
       courseCount.textContent = "";
     }
   }
-
-  let courses = [];
 
   function renderItemTypeOptions() {
     const itemTypes = [...new Set(courses.map((course) => course.itemType))].sort((a, b) =>
@@ -115,6 +154,14 @@
 
     if (dateFrom && dateTo && dateFrom > dateTo) {
       courseCount.textContent = "";
+      if (courseCalendar) {
+        if (calendar) {
+          calendar.removeAllEvents();
+        }
+        calendarMessage.textContent = "The start date must be on or before the end date.";
+        calendarMessage.hidden = false;
+        return;
+      }
       courseList.replaceChildren(
         createMessage("The start date must be on or before the end date.", "catalogue-empty"),
       );
@@ -130,7 +177,29 @@
         (!dateTo || course.date <= dateTo),
     );
 
-    courseCount.textContent = `Showing ${visibleCourses.length} of ${courses.length} courses`;
+    courseCount.textContent = courseCalendar
+      ? `Showing ${visibleCourses.length} of ${courses.length} learning items`
+      : `Showing ${visibleCourses.length} of ${courses.length} courses`;
+
+    if (courseCalendar) {
+      calendarMessage.textContent =
+        visibleCourses.length === 0
+          ? "No learning items match your filters. Try changing or clearing them."
+          : "";
+      calendarMessage.hidden = visibleCourses.length > 0;
+      if (calendar) {
+        calendar.removeAllEvents();
+        visibleCourses.forEach((course) => {
+          calendar.addEvent({
+            id: course.id,
+            title: course.name,
+            start: course.date,
+            url: course.hyperlink,
+          });
+        });
+      }
+      return;
+    }
 
     if (visibleCourses.length === 0) {
       courseList.replaceChildren(
