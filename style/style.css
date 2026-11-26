@@ -541,6 +541,14 @@ a:hover {
   min-height: 200px;
 }
 
+.quick-access-grid .course-card {
+  min-height: 220px;
+}
+
+.home-primary .course-grid {
+  column-gap: 32px;
+}
+
 .course-card {
   display: flex;
   flex-direction: column;
@@ -907,9 +915,13 @@ a:hover {
 
 .home-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 320px);
+  gap: 48px;
   align-items: stretch;
+}
+
+.home-page .new-page-container {
+  max-width: 1320px;
 }
 
 .home-primary {
@@ -1065,11 +1077,19 @@ a:hover {
     gap: 14px;
   }
 
+  .home-primary .course-grid {
+    column-gap: 14px;
+  }
+
   .course-card {
     min-height: 0;
   }
 
   .course-grid--two .course-card {
+    min-height: 0;
+  }
+
+  .quick-access-grid .course-card {
     min-height: 0;
   }
 

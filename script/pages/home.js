@@ -54,7 +54,6 @@ function renderUpcomingCourse(course) {
   const content = document.createElement("div");
   const title = document.createElement("a");
   const date = document.createElement("span");
-  const arrow = document.createElement("span");
 
   item.className = "learning-item";
   title.className = "learning-item__title";
@@ -64,11 +63,9 @@ function renderUpcomingCourse(course) {
   title.textContent = course.name;
   date.className = "learning-item__detail";
   date.textContent = formatUpcomingDate(course.date);
-  arrow.setAttribute("aria-hidden", "true");
-  arrow.textContent = "→";
 
   content.append(title, date);
-  item.append(content, arrow);
+  item.append(content);
   listItem.append(item);
   return listItem;
 }
