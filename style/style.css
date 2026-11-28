@@ -705,6 +705,129 @@ a:hover {
   margin-bottom: 40px;
 }
 
+.learner-callout,
+.learner-note,
+.learner-help {
+  padding: 18px 20px;
+  border-left: 5px solid var(--trust-blue);
+  background: #f5f7f8;
+}
+
+.learner-callout {
+  margin-bottom: 30px;
+  background: var(--pale-blue);
+}
+
+.learner-guides-title {
+  margin-bottom: 16px;
+  color: var(--deep-blue);
+  font-size: 24px;
+}
+
+.learner-accordion {
+  margin-bottom: 40px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.learner-accordion .accordion-button {
+  color: var(--deep-blue);
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.learner-accordion .accordion-button:not(.collapsed) {
+  background: var(--pale-blue);
+  color: var(--deep-blue);
+  box-shadow: none;
+}
+
+.learner-accordion .accordion-button:focus {
+  border-color: var(--trust-blue);
+  box-shadow: 0 0 0 3px rgba(0, 94, 184, .2);
+}
+
+.learner-callout h2,
+.learner-note h4,
+.learner-help h2 {
+  color: var(--deep-blue);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.learner-callout p,
+.learner-note p,
+.learner-help p {
+  margin-bottom: 0;
+}
+
+.learner-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: learner-step;
+}
+
+.learner-steps > li {
+  position: relative;
+  min-width: 0;
+  padding: 18px 18px 18px 68px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  counter-increment: learner-step;
+}
+
+.learner-steps > li::before {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--trust-blue);
+  color: #fff;
+  content: counter(learner-step);
+  font-weight: 700;
+}
+
+.learner-steps h4 {
+  margin-bottom: 8px;
+  color: var(--deep-blue);
+  font-size: 18px;
+}
+
+.learner-steps p,
+.learner-steps ul {
+  margin-bottom: 0;
+}
+
+.learner-steps ul {
+  padding-left: 20px;
+}
+
+.learner-note {
+  margin-top: 20px;
+}
+
+.learner-note h4 {
+  margin-bottom: 8px;
+}
+
+.learner-help {
+  margin-top: 40px;
+}
+
+.learner-help h2 {
+  margin-bottom: 8px;
+}
+
 .educator-intro {
   max-width: 850px;
   color: var(--muted);
@@ -1155,6 +1278,10 @@ a:hover {
   }
 
   .educator-representatives {
+    grid-template-columns: 1fr;
+  }
+
+  .learner-steps {
     grid-template-columns: 1fr;
   }
 
