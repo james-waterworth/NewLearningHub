@@ -149,6 +149,15 @@
     const description = document.createElement("p");
 
     article.className = "search-result search-result--course";
+    if (course.itemType === "Video") {
+      article.classList.add("course-card--video");
+    }
+    if (course.itemType === "Course") {
+      article.classList.add("course-card--course");
+    }
+    if (course.itemType === "Quality Improvement") {
+      article.classList.add("course-card--quality-improvement");
+    }
     type.className = "search-result__type";
     type.textContent = `${course.itemType} · ${course.topic} · ${course.courseType}`;
     heading.className = "search-result__title";

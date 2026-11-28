@@ -56,7 +56,7 @@
     const link = document.createElement("a");
     const arrow = document.createElement("span");
 
-    article.className = "course-card";
+    article.className = "course-card course-card--quality-improvement";
     meta.className = "course-card__meta";
     meta.textContent = `${formatDate(item.date)} · ${item.topic} · ${item.courseType}`;
     heading.textContent = item.name;
